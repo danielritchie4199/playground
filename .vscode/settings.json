@@ -1,0 +1,14 @@
+{
+    "git.enabled": true,
+    "git.autoRepositoryDetection": true,
+    "git.detectRepositoryInParent": true,
+    "git.remoteHubEnabled": true,
+    "github.enabled": true,
+    "scm.autoReveal": true,
+    "files.watcherExclude": {
+        "**/.git/objects/**": true,
+        "**/.git/subtree-cache/**": true,
+        "**/node_modules/*/**": true,
+        "**/.hg/store/**": true
+    }
+} 
