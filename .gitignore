@@ -1,0 +1,11 @@
+# ADsP 관련 폴더 제외
+ADsP_K/
+ADsP_Y/
+
+# 모든 zip 파일 제외
+*.zip
+
+# 프로젝트 폴더들 (필요시 제외)
+Project_tjeoun/
+newssquare-masters/
+개발일지*/
