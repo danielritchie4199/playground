@@ -2932,3 +2932,96 @@ Ubuntu 가상 환경 생성
 **생성 날짜:** 2025년 1월 27일
 **총 질문 수:** 37개
 **파일 형식:** Markdown (.md)
+
+---
+
+## 질문 38: 폴더 경로 매핑
+
+**사용자 질문:**
+```
+background agent 를 실행하기 전까지
+  C:\workspace\playground 에 있었다
+현재  cursor 가 열고 있는 폴더의 path 를 알려줘
+```
+
+**AI 답변:**
+
+## 📁 폴더 경로 매핑 설명
+
+### 🗂️ 경로 정보:
+
+**🔹 Windows (호스트) 경로:**
+```
+C:\workspace\playground
+```
+- Background Agent 실행 전 위치
+- 실제 파일들이 저장된 Windows 경로
+
+**🔹 가상 환경 (현재) 경로:**
+```
+/workspace
+```
+- Background Agent가 보는 경로
+- Ubuntu 가상 환경 내부 경로
+
+### 🔄 경로 매핑 관계:
+
+```
+Windows 경로:              가상 환경 경로:
+C:\workspace\playground    →    /workspace
+         ↓                         ↓
+    [실제 파일 위치]          [가상 환경이 보는 위치]
+```
+
+### 📋 현재 디렉토리 내용:
+
+```
+/workspace/
+├── .git/          (Git 저장소)
+├── .vscode/       (VS Code 설정)
+├── chat.md        (대화 기록 - 83KB)
+├── .gitignore     (Git 제외 설정)
+└── README.md      (프로젝트 문서)
+```
+
+### 💡 중요한 점:
+
+**1. 같은 파일들**
+- Windows의 `C:\workspace\playground`와
+- 가상 환경의 `/workspace`는
+- **동일한 파일들을 가리킴**
+
+**2. 자동 동기화**
+- 가상 환경에서 파일 수정 → Windows에 즉시 반영
+- Windows에서 파일 수정 → 가상 환경에서도 보임
+
+**3. 경로 변환**
+```
+Windows 스타일:  C:\workspace\playground\chat.md
+Linux 스타일:    /workspace/chat.md
+(같은 파일)
+```
+
+### ✅ 현재 상황:
+
+- **Cursor가 열고 있는 폴더**: `C:\workspace\playground` (Windows)
+- **Background Agent가 보는 경로**: `/workspace` (가상 환경)
+- **실제로는 같은 폴더**를 다른 경로로 표현
+
+### 🎯 요약:
+
+```
+실제 위치: C:\workspace\playground (Windows)
+     ↓
+가상 경로: /workspace (Ubuntu VM)
+     ↓
+같은 파일들, 다른 표현
+```
+
+파일 편집이나 Git 작업 모두 정상적으로 Windows 파일에 반영됨! 🔗
+
+---
+
+**생성 날짜:** 2025년 1월 27일
+**총 질문 수:** 38개
+**파일 형식:** Markdown (.md)
